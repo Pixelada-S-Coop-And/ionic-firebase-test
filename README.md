@@ -20,4 +20,6 @@ test de firebase en ionic
     
     ```npm i @awesome-cordova-plugins/push```
 
+5- Imports in app.module.ts and app.component.module.ts
+
 
