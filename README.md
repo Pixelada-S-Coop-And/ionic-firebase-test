@@ -22,4 +22,9 @@ test de firebase en ionic
 
 5- Imports in app.module.ts and app.component.module.ts
 
+6- Creamos el proyecto en Firebase https://console.firebase.google.com/u/1/?pli=1
+
+
+## Guía del plugin
+https://github.com/havesource/cordova-plugin-push/blob/master/docs/INSTALLATION.md
 
