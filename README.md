@@ -22,9 +22,11 @@ test de firebase en ionic
 
 5- Imports in app.module.ts and app.component.module.ts
 
-6- Creamos el proyecto en Firebase https://console.firebase.google.com/u/1/?pli=1
+6- Establecemos el id y el nombre de la app y añadimos el plugin en config.xml 
 
-7- Ponemos fichero google-services.json a /platforms/android/app
+7- Creamos el proyecto en Firebase https://console.firebase.google.com/u/1/?pli=1
+
+8- Ponemos fichero google-services.json a /platforms/android/app
     https://www.positronx.io/ionic-firebase-fcm-push-notification-tutorial-with-example/
 
 
