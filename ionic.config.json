@@ -1,7 +1,7 @@
 {
   "name": "ionic-firebase-test",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }
