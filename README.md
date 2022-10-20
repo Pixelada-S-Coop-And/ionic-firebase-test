@@ -24,6 +24,11 @@ test de firebase en ionic
 
 6- Creamos el proyecto en Firebase https://console.firebase.google.com/u/1/?pli=1
 
+7- Ponemos fichero google-services.json a /platforms/android/app
+    https://www.positronx.io/ionic-firebase-fcm-push-notification-tutorial-with-example/
+
+
+
 
 ## Guía del plugin
 https://github.com/havesource/cordova-plugin-push/blob/master/docs/INSTALLATION.md
