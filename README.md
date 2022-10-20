@@ -5,6 +5,7 @@ test de firebase en ionic
 
 1- Tiene que estar instalado cordova global y cordova-res (y desinstalado capacitor)
 	```sudo npm i -g cordova && sudo npm i -g cordova-res```
+
 2- Añadirmos plataforma Android
 	```ionic cordova platform add android```
 	
