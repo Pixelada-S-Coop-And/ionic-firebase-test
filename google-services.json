@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "760597550387",
+    "project_id": "ionic-firebase-test-325cd",
+    "storage_bucket": "ionic-firebase-test-325cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760597550387:android:5eb4fd9f8f2f4a52425a46",
+        "android_client_info": {
+          "package_name": "com.pixelada.ionicfirebasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760597550387-d4pgvketaf4r4mf8mq4olti7hnu97dp4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Fw7QpsedBPoxZIQru-vY0eeDIo2996I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760597550387-d4pgvketaf4r4mf8mq4olti7hnu97dp4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
