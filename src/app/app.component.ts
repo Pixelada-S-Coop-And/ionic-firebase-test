@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform, AlertController } from '@ionic/angular';
 import { Push, PushObject, PushOptions } from '@awesome-cordova-plugins/push/ngx';
 @Component({
   selector: 'app-root',
@@ -7,7 +7,10 @@ import { Push, PushObject, PushOptions } from '@awesome-cordova-plugins/push/ngx
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private platform : Platform, private push: Push) {
+  handlerMessage = '';
+  roleMessage = '';
+
+  constructor(private platform : Platform, private push: Push, private alertController: AlertController) {
     this.platform.ready().then(() => {
       
       //Check permision for push notifications
@@ -49,14 +52,47 @@ export class AppComponent {
             }
       
             const pushObject: PushObject = this.push.init(options);
-            pushObject.subscribe("my-test").then ((info) => console.log('subscribed to my-test ', info));
+            pushObject.subscribe("my-test").then ((info) => { 
+              console.log('subscribed to my-test ', info);
+              this.presentAlert(JSON.stringify(info));
+            });
       
       
-            pushObject.on('notification').subscribe((notification: any) => console.log('Received a notification', notification));
+            pushObject.on('notification').subscribe((notification: any) => { 
+              this.presentAlert(JSON.stringify(notification));
+            }); 
       
             pushObject.on('registration').subscribe((registration: any) => console.log('Device registered', registration));
       
             pushObject.on('error').subscribe(error => console.error('Error with Push plugin', error));
       });
+  }
+
+  async presentAlert(msg) {
+    const alert = await this.alertController.create({
+      header: 'Alerta',
+      message: msg,
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            this.handlerMessage = 'Alert canceled';
+          },
+        },
+        {
+          text: 'OK',
+          role: 'confirm',
+          handler: () => {
+            this.handlerMessage = 'Alert confirmed';
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    this.roleMessage = `Dismissed with role: ${role}`;
   }
 }
